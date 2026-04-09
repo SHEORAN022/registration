@@ -44,18 +44,13 @@ const enrollSchema = new mongoose.Schema(
       required: true
     },
 
-    payment: {
-      type: Number,
-      required: true
-    },
-    token: {
-      type: Number,
-      required: true
-    },
-    fullPayment: {
-      type: Number,
-      required: true
-    }
+   payment: {
+  type: Number,
+  enum: [4499, 999],
+  required: true
+},
+    
+  
   },
   { timestamps: true }
 );
